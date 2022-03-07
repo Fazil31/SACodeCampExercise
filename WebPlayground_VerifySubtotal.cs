@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 
 namespace SACodeCampExercise
 {
+    [TestCategory("CartTests")]
     [TestClass]
     public class WebPlayground_VerifySubtotal
     {
@@ -18,7 +19,11 @@ namespace SACodeCampExercise
         [TestMethod]
         public void TestMethod1()
         {
-
+            Cart Row = GetNextRow();
+            Cart Quantity = GetQuantity();
+            Cart SinglePrice = GetPrice();
+            Cart Subtotal = GetSubtotal();
+               
         }
 
         [TestCleanup]
