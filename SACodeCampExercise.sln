@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32210.238
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SACodeCampExercise", "SACodeCampExercise.csproj", "{7A7638E1-4F52-4786-8EEA-0AA36B8C0399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SACodeCampExercise", "SACodeCampExercise\SACodeCampExercise.csproj", "{D6F3941D-E4EE-430F-930F-234AF8F873AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7A7638E1-4F52-4786-8EEA-0AA36B8C0399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A7638E1-4F52-4786-8EEA-0AA36B8C0399}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A7638E1-4F52-4786-8EEA-0AA36B8C0399}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A7638E1-4F52-4786-8EEA-0AA36B8C0399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F3941D-E4EE-430F-930F-234AF8F873AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F3941D-E4EE-430F-930F-234AF8F873AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F3941D-E4EE-430F-930F-234AF8F873AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F3941D-E4EE-430F-930F-234AF8F873AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4BE9FB5B-D72B-4645-AB66-D268EC5BB21E}
+		SolutionGuid = {42B6A2FA-2A5B-4789-BCD3-C829D30C90B7}
 	EndGlobalSection
 EndGlobal
