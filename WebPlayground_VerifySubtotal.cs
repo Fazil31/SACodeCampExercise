@@ -18,5 +18,12 @@ namespace SACodeCampExercise
         public void TestMethod1()
         {
         }
+
+        [TestCleanup]
+        public void Cleaner()
+        {
+            manager.Cleanup();
+        }
+
     }
 }
