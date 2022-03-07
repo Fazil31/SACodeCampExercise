@@ -1,28 +1,30 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 
 namespace SACodeCampExercise
 {
     [TestClass]
     public class WebPlayground_VerifySubtotal
     {
-        IWebDriver driver;
-        BaseTestClass manager = new(driver);
+        private IWebDriver driver;
+        BaseTestClass manager = new();
 
         [TestInitialize]
         public void Setup()
         {
-            manager.ConfigDriver(driver);
+            driver = manager.ConfigDriver(driver);
         }
 
         [TestMethod]
         public void TestMethod1()
         {
+
         }
 
         [TestCleanup]
         public void Cleaner()
         {
-            manager.Cleanup();
+            manager.Cleanup(driver);
         }
 
     }
