@@ -25,7 +25,7 @@ namespace SACodeCampExercise
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void CheckTotal()
         {
 
         }
