@@ -11,22 +11,21 @@ namespace SACodeCampExercise
     public class UnitTest1
     {
         IWebDriver? driver;
-    [TestMethod]
+
+        [TestMethod]
         public void PlayGroundVerifyPrice()
         {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            ReadOnlyCollection<IWebElement> Lists = driver.FindElements(By.TagName("ul"));
-            foreach (var item in Lists)
-            {
-                item.FindElement(By.ClassName("list-list")).Click();
-                break;     
-            }
-            
+            UnorderedListOperation Unorderlistoperation = new UnorderedListOperation(driver);
+            Unorderlistoperation.ClickOnHeart();
+            Assert.IsTrue(driver.FindElement(By.ClassName("popup-message")).Text == "You loved List Item 1");
         }
+        
         [TestInitialize()]
         public void Setup() {
              driver = new ChromeDriver(@"C:\Tools\chromedriver98");
-            driver.Url = "https://d18u5zoaatmpxx.cloudfront.net/#/";
+             driver.Url = "https://d18u5zoaatmpxx.cloudfront.net/#/";
+             driver.Manage().Window.Maximize();
+
         }
         [TestCleanup()]
         public void Cleanup()
