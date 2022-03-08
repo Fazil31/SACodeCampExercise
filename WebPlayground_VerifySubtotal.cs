@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace SACodeCampExercise
 {
@@ -7,29 +8,29 @@ namespace SACodeCampExercise
     [TestClass]
     public class WebPlayground_VerifySubtotal
     {
-        private IWebDriver driver;
-        BaseTestClass manager = new();
+        public ChromeDriver driver = new ChromeDriver();
 
         [TestInitialize]
         public void Setup()
         {
-            driver = manager.ConfigDriver(driver);
+            driver.Url = "https://d18u5zoaatmpxx.cloudfront.net/#/";
+            driver.Manage().Window.Maximize();
+            driver.Manage().Cookies.DeleteAllCookies();
         }
 
         [TestMethod]
         public void TestMethod1()
         {
-            Cart Row = GetNextRow();
-            Cart Quantity = GetQuantity();
-            Cart SinglePrice = GetPrice();
-            Cart Subtotal = GetSubtotal();
-               
+            Cart testCart = new(driver);
+            string quantity = "6";
+
+            Assert.AreEqual(expected: testCart.GetPriceData(quantity), actual: testCart.GetActualSubtotal());
         }
 
         [TestCleanup]
         public void Cleaner()
         {
-            manager.Cleanup(driver);
+            driver.Quit();
         }
 
     }
